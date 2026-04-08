@@ -1,5 +1,6 @@
 package edu.tcu.cs.hogwartsartifactsonline.hogwartsuser;
 
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import tools.jackson.databind.ObjectMapper;
 import edu.tcu.cs.hogwartsartifactsonline.hogwartsuser.dto.UserDto;
@@ -28,6 +29,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc(addFilters = false)
+@ActiveProfiles(value="dev")
 class UserControllerTest {
 
     @Autowired
